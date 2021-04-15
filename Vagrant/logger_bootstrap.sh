@@ -160,6 +160,7 @@ install_splunk() {
     /opt/splunk/bin/splunk add index suricata -auth 'admin:changeme'
     /opt/splunk/bin/splunk add index threathunting -auth 'admin:changeme'
     /opt/splunk/bin/splunk add index evtx_attack_samples -auth 'admin:changeme'
+    /opt/splunk/bin/splunk add index msexchange -auth 'admin:changeme'
     /opt/splunk/bin/splunk install app /vagrant/resources/splunk_forwarder/splunk-add-on-for-microsoft-windows_700.tgz -auth 'admin:changeme'
     /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/splunk-add-on-for-microsoft-sysmon_1062.tgz -auth 'admin:changeme'
     /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/asn-lookup-generator_110.tgz -auth 'admin:changeme'
@@ -169,7 +170,7 @@ install_splunk() {
     /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/punchcard-custom-visualization_130.tgz -auth 'admin:changeme'
     /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/sankey-diagram-custom-visualization_130.tgz -auth 'admin:changeme'
     /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/link-analysis-app-for-splunk_161.tgz -auth 'admin:changeme'
-    /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/threathunting_144.tgz -auth 'admin:changeme'
+    /opt/splunk/bin/splunk install app /vagrant/resources/splunk_server/threathunting_1492.tgz -auth 'admin:changeme'
     
     # Fix ASNGen App - https://github.com/doksu/TA-asngen/issues/18#issuecomment-685691630
     echo 'python.version = python2' >> /opt/splunk/etc/apps/TA-asngen/default/commands.conf
